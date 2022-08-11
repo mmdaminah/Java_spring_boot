@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
+    <context:component-scan base-package="app.raiko"/>
+    <!--    <context:property-placeholder location="classpath:application.properties"/>-->
+    <!--    <bean id="adminJdbcDao" class="app.raiko.internspring.AdminJdbcDao"/>-->
+    <!--    <bean id="adminFileDao" class="app.raiko.internspring.AdminFileDao"/>-->
+    <!--    <bean id="adminMapperImpl" class="app.raiko.internspring.AdminMapperImpl"/>-->
+    <bean id="adminDefaultService" class="app.raiko.internspring.AdminDbServiceImpl" init-method="init"
+          destroy-method="destroy">
+        <constructor-arg name="adminDao" ref="adminJdbcDao"/>
+        <constructor-arg name="adminMapper" ref="adminMapperImpl"/>
+    </bean>
+    <!--    <bean id="adminFileServiceImpl" class="app.raiko.internspring.AdminFileServiceImpl">-->
+    <!--        <property name="adminDao" ref="adminFileDao"/>-->
+    <!--        <property name="adminMapper" ref="adminMapperImpl"/>-->
+    <!--    </bean>-->
+</beans>

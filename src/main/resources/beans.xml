@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
+    <context:component-scan base-package="com.example.dependencyinjectionspring"/>
+        <!-- Using Constructor   -->
+<!--    <bean id="adminJdbcDao" class="com.example.dependencyinjectionspring.AdminJdbcDao" />-->
+<!--    <bean id="adminFileDao" class="com.example.dependencyinjectionspring.AdminFileDao"/>-->
+<!--    <bean id="adminMapper" class="com.example.dependencyinjectionspring.AdminMapperImp"/>-->
+<!--    <bean id="adminService" class="com.example.dependencyinjectionspring.AdminDbServiceImp">-->
+<!--        <constructor-arg name="adminDao" ref="adminFileDao" />-->
+<!--        <constructor-arg name="adminMapper" ref="adminMapper" />-->
+<!--    </bean>-->
+    <!-- Using Setter   -->
+<!--    <bean id="adminJdbcDao" class="com.example.dependencyinjectionspring.AdminJdbcDao" />-->
+<!--    <bean id="adminFileDao" class="com.example.dependencyinjectionspring.AdminFileDao"/>-->
+<!--    <bean id="adminMapper" class="com.example.dependencyinjectionspring.AdminMapperImp"/>-->
+<!--    <bean id="adminService" class="com.example.dependencyinjectionspring.AdminDbServiceImp">-->
+<!--        <property name="adminDao"  ref="adminJdbcDao"/>-->
+<!--        <property name="adminMapper" ref="adminMapper"/>-->
+<!--    </bean>-->
+</beans>
